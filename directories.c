@@ -29,7 +29,7 @@ lists *path_dirs()
 			temp->next = new_node;
 			temp = new_node;
 		}
-		dir = strtok(NULL, ":\0");
+		tok = strtok(NULL, ":\0");
 	}
 	return (head);
 }

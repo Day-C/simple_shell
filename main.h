@@ -8,6 +8,7 @@
 #include <sys/wait.h>
 #include <string.h>
 #include <stddef.h>
+#include <sys/stat.h>
 
 /**
  * struct lists - structure for path directories
@@ -25,6 +26,9 @@ typedef struct node{
 char *read_line(void);
 char **tok_line(char *str);
 int execute(char **cmd,char *file_name);
-void interactive_shell(char **oagrs;
+void interactive_shell(char **agrs);
+
+lists *path_dirs();
+void free_lists(lists *head);
 
 #endif
