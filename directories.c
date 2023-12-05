@@ -7,19 +7,29 @@
 lists *path_dirs()
 {
 	char path[] = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";
-	int i = 0;
 	char *tok;
-	list *head;
-	list *next;
-	list *new_node;
-
-	new_node = malloc(sizeof(list));
-	new_node->data
+	lists *head = NULL;
+	lists *temp = NULL;
+	lists *new_node;
 
 	tok = strtok(path, ":\0");
 	while (tok)
 	{
+		new_node = malloc(sizeof(lists));
+		new_node->dir  = strdup(tok);
+		new_node->next = NULL;
+
 		if (!head)
 		{
-			head->dir = tok;
-			t
+			head = new_node;
+			temp = new_node;
+		}
+		else
+		{
+			temp->next = new_node;
+			temp = new_node;
+		}
+		dir = strtok(NULL, ":\0");
+	}
+	return (head);
+}
