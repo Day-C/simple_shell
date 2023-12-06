@@ -25,10 +25,13 @@ typedef struct node{
 
 char *read_line(void);
 char **tok_line(char *str);
-int execute(char **cmd,char *file_name);
+int execut(char *cmd, char **args, char *file_name);
 void interactive_shell(char **agrs);
 
 lists *path_dirs();
 void free_lists(lists *head);
+
+char *in_path_check(char *cmd);
+void run_execute(char **command, char *file);
 
 #endif

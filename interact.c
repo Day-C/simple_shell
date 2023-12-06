@@ -17,7 +17,7 @@ void interactive_shell(char **args)
 		printf(":) ");
 		str = read_line();
 		cmd = tok_line(str);
-		i = execute(cmd, args[0]);
+		run_execute(cmd, args[0]);
 		free(cmd);
 		free(str);
 	}
