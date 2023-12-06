@@ -56,14 +56,14 @@ void run_execute(char **arguments, char *file)
 	else
 	{
 		cmd = in_path_check(arguments[0]);
-		printf("%s\n", cmd);
+
 		if (cmd != NULL)
 		{
 			ret = execut(cmd, arguments, file);
 
 			if (ret == -1)
 			{
-				printf("freeing needed\n");
+				
 			}
 		}
 	}

@@ -11,6 +11,7 @@ void free_lists(lists *head)
 	while (head)
 	{
 		temp = head->next;
+		free(head->dir);
 		free(head);
 		head = temp;
 	}

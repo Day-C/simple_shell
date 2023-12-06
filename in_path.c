@@ -9,9 +9,8 @@ char *in_path_check(char *cmd)
 {
 	char *catted_cmd;
 	struct stat st;
-	lists *temp = NULL;
 	lists *head = NULL;
-
+	lists *temp = NULL;
 	head = path_dirs();
 
 	while (head)
@@ -30,7 +29,7 @@ char *in_path_check(char *cmd)
 		{
 			if (head != NULL)
 			{
-
+				free_lists(head);
 			}
 			break;
 		}
