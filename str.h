@@ -7,5 +7,6 @@
 int chat_count(char *str);
 char *concat(char *str1, char *str2);
 char *duplicate(char *str);
+int compare_str(char *str1, char *str2);
 
 #endif

@@ -76,3 +76,29 @@ char *duplicate(char *str)
 
 	return (dup);
 }
+
+/**
+ * compare_strs - function compares strings
+ * @str1: string input
+ * @str2: string input
+ * Return: return 0 on success otherwise 1
+ */
+int compare_str(char *str1, char *str2)
+{
+	int  i;
+
+	if (char_count(str1) != char_count(str2))
+		return (1);
+	else
+	{
+		for (i = 0; str1[i]; i++)
+		{
+			if (str1[i] == str2[i])
+				continue;
+			else
+				return (1);
+		}
+	}
+	return (0);
+}
+

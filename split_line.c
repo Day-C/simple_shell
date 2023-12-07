@@ -37,8 +37,7 @@ char **tok_line(char *str)
 		token = strtok(NULL, delim);
 		i++;
 	}
-	/*
-	free(str);*/
+
 	free(dup);
 	return (ptr);
 }

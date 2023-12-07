@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "builtin.h"
 /**
  * interactive_shell - function for interactive shell
  *
@@ -17,6 +17,7 @@ void interactive_shell(char **args)
 		printf(":) ");
 		str = read_line();
 		cmd = tok_line(str);
+		_builtin(str, cmd);
 		run_execute(cmd, args[0]);
 		free(cmd);
 		free(str);
