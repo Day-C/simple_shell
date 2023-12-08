@@ -23,7 +23,6 @@ int execut(char *cmd, char **args, char *file_name)
 			perror(file_name);
 			return (-1);
 		}
-		
 	}
 	else
 	{
@@ -60,11 +59,7 @@ void run_execute(char **arguments, char *file)
 		if (cmd != NULL)
 		{
 			ret = execut(cmd, arguments, file);
-
-			if (ret == -1)
-			{
-				
-			}
+			free(cmd);
 		}
 	}
 }
