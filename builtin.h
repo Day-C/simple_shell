@@ -3,9 +3,9 @@
 
 #include <stdio.h>
 
-void _builtin(char *buf, char **args);
-void exiting(char *f, char **arg);
-void go_to(char *f, char **arg);
-void environ(char *f, char **arg);
+int _builtin(char *buf, char **args, char **env_var);
+void exiting(char *ipt, char **arg, char **env_i);
+void go_to(char *ipt, char **arg, char **env_i);
+void enviroment(char *ipt, char **arg, char **env_i);
 
 #endif

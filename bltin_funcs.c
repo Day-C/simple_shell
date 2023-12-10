@@ -1,37 +1,53 @@
 #include "main.h"
 #include "builtin.h"
+
 /**
  * exiting - function to exit
- *
+ * @ipt: command input
+ * @arg: tokens of command
+ * @env_i: enviroment variable
  * Return: nothing (void)
  */
-void exiting(char *f, char **arg)
+void exiting(char *ipt, char **arg, char **env_i)
 {
-	free(f);
-	free(arg);
-	exit(EXIT_SUCCESS);
+	while (env_i)
+	{
+		free(ipt);
+		free(arg);
+		exit(EXIT_SUCCESS);
+	}
 }
 
 /**
  * go_to - functioon to change directory
- *
+ * @ipt: input command
+ * @args: tokenized command
+ * @env_i: enviroment variable
  * Return: void
  */
-void go_to(char *f, char **arg)
+void go_to(char *ipt, char **arg, char **env_i)
 {
-	free(f);
-	free(arg);
-	printf("hello\n");
+	while (env_i)
+	{
+		free(ipt);
+		free(arg);
+	}
 }
 
 /**
  * environ - function for enviroment var
- *
+ * @ipt: input command
+ * @arg: tokenised command
+ * @env_i: envirunment variable
  * Return: void
  */
-void environ(char *f, char **arg)
+void enviroment(char *ipt, char **arg, char **env_i)
 {
-	free(f);
-	free(arg);
-	printf("/enviroment\n");
+	int i;
+
+	for (i = 0; env_i[i]; i++)
+	{
+		printf("%s\n", env_i[i]);
+	}
+	
 }

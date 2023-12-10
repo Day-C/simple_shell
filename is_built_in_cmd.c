@@ -10,16 +10,18 @@
  */
 typedef struct command{
 	char *str;
-	void (*func)(char *b, char **a);
+	void (*func)(char *a, char **b, char **c);
 } built_in;
 
 
 /**
- * is_built_in - function chechs is command is a valid built in command
+ * _built_in - function chechs is command is a valid built in command
  * @cmd - string pointer(input)
- * Return: return nothing (void function)
+ * @args: double pointer
+ * @env_var: envirunment variable
+ * Return: return 0 on success and -1 otherwise
  */
-void _builtin(char *buf, char **args)
+int _builtin(char *buf, char **args, char **env_var)
 {       
 	int len, i;
 	char *impt;
@@ -27,7 +29,7 @@ void _builtin(char *buf, char **args)
 	built_in list[]  = {
 		{"cd", go_to},
 		{"exit", exiting},
-		{"env", environ}
+		{"env", enviroment}
 	};      
 
 	len = 3;
@@ -35,7 +37,9 @@ void _builtin(char *buf, char **args)
 	{
 		if (compare_str(args[0], list[i].str) == 0)
 		{
-			list[i].func(buf, args);
+			list[i].func(buf, args, env_var);
+			return (0);
 		}
 	}
+	return (-1);
 }

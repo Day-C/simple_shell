@@ -26,7 +26,7 @@ typedef struct node{
 char *read_line(void);
 char **tok_line(char *str);
 int execut(char *cmd, char **args, char *file_name);
-void interactive_shell(char **agrs);
+void interactive_shell(char **agrs, char **envir);
 
 lists *path_dirs();
 void free_lists(lists *head);

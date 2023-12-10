@@ -2,11 +2,11 @@
 #include "builtin.h"
 /**
  * interactive_shell - function for interactive shell
- *
- *
+ * @args: main argument vector
+ * @envir: envirunment variable
  * Return: nothing
  */
-void interactive_shell(char **args)
+void interactive_shell(char **args, char **envir)
 {
 	int i = 0;
 	char *str;
@@ -17,8 +17,10 @@ void interactive_shell(char **args)
 		printf(":) ");
 		str = read_line();
 		cmd = tok_line(str);
-		_builtin(str, cmd);
-		run_execute(cmd, args[0]);
+		if (_builtin(str, cmd, envir) == -1)
+		{
+			run_execute(cmd, args[0]);
+		}
 		free(cmd);
 		free(str);
 	}
