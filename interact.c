@@ -8,7 +8,6 @@
  */
 void interactive_shell(char **args, char **envir)
 {
-	int i = 0;
 	char *str;
 	char **cmd;
 

@@ -21,7 +21,7 @@ void exiting(char *ipt, char **arg, char **env_i)
 /**
  * go_to - functioon to change directory
  * @ipt: input command
- * @args: tokenized command
+ * @arg: tokenized command
  * @env_i: enviroment variable
  * Return: void
  */
@@ -35,7 +35,7 @@ void go_to(char *ipt, char **arg, char **env_i)
 }
 
 /**
- * environ - function for enviroment var
+ * enviroment - function for enviroment var
  * @ipt: input command
  * @arg: tokenised command
  * @env_i: envirunment variable
@@ -45,9 +45,11 @@ void enviroment(char *ipt, char **arg, char **env_i)
 {
 	int i;
 
-	for (i = 0; env_i[i]; i++)
+	if (ipt != NULL && arg != NULL)
 	{
-		printf("%s\n", env_i[i]);
+		for (i = 0; env_i[i]; i++)
+		{
+			printf("%s\n", env_i[i]);
+		}
 	}
-	
 }

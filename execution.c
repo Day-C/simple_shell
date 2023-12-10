@@ -1,8 +1,10 @@
 #include "main.h"
 #include "str.h"
 /**
- * execute - function runs an executable file
- * @cmd: pointer to an array of  stings
+ * execut - function runs an executable file
+ * @cmd: first argument of tokenised string(command)
+ * @args: tokenized string
+ * @file_name: first argument of argv
  * Return: erturn 0 on success;
  */
 int execut(char *cmd, char **args, char *file_name)
@@ -27,13 +29,13 @@ int execut(char *cmd, char **args, char *file_name)
 	else
 	{
 		wait(NULL);
-	}	
+	}
 	return (0);
 }
 
 /**
  * run_execute - function runs execute funtion
- * @command: cmd
+ * @arguments: command
  * @file: filename
  * Return: void;
  */

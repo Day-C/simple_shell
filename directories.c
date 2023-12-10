@@ -1,8 +1,8 @@
 #include "main.h"
 /*
- * path_dirs - path fnction
+ * path_dirs - function creates a linked list by tokenizing an array
  *
- * Return: return 
+ * Return: returns a pointer to the first node
  */
 lists *path_dirs()
 {

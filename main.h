@@ -11,14 +11,15 @@
 #include <sys/stat.h>
 
 /**
- * struct lists - structure for path directories
+ * struct node - structure for path directories
  * @dir: pointer to string
  * @next: pointer to next node
  *
  * Description: The list structure is to be used to store all the directories
  * of the path into a single linked list
  */
-typedef struct node{
+typedef struct node
+{
 	char *dir;
 	struct node *next;
 } lists;

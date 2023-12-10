@@ -16,7 +16,7 @@ int char_count(char *str)
 }
 
 /**
- * concant_strs - function concatenate 2 input strings
+ * concat - function concatenate 2 input strings
  * @str1: first string pointer
  * @str2: second string pointer
  * Return: pointer to new string
@@ -54,7 +54,7 @@ char *concat(char *str1, char *str2)
 /**
  * duplicate - function create a duplicate of string input
  * @str: string pointer
- * Return : pointer to duplicate
+ * Return: pointer to duplicate
  */
 char *duplicate(char *str)
 {
@@ -78,7 +78,7 @@ char *duplicate(char *str)
 }
 
 /**
- * compare_strs - function compares strings
+ * compare_str - function compares strings
  * @str1: string input
  * @str2: string input
  * Return: return 0 on success otherwise 1
@@ -89,15 +89,12 @@ int compare_str(char *str1, char *str2)
 
 	if (char_count(str1) != char_count(str2))
 		return (1);
-	else
+	for (i = 0; str1[i]; i++)
 	{
-		for (i = 0; str1[i]; i++)
-		{
-			if (str1[i] == str2[i])
-				continue;
-			else
-				return (1);
-		}
+		if (str1[i] == str2[i])
+			continue;
+		else
+			return (1);
 	}
 	return (0);
 }

@@ -3,6 +3,7 @@
  * main - main
  * @argc: argument count
  * @argv: argument vector
+ * @envp: enviroment variable
  * Return: return 0 on success
  */
 int main(int argc, char **argv, char  **envp)

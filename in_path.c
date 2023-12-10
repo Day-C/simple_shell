@@ -11,15 +11,15 @@ char *in_path_check(char *cmd)
 	struct stat st;
 	lists *head = NULL;
 	lists *temp = NULL;
-	head = path_dirs();
 
+	head = path_dirs();
 	while (head)
 	{
 		catted_cmd = concat(head->dir, cmd);
 		if (stat(catted_cmd, &st) == -1)
 		{
 			free(catted_cmd);
-			temp = head->next;
+		temp = head->next;
 			free(head->dir);
 			free(head);
 			head = temp;

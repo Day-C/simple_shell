@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * free_list - function frees a linked list
+ * free_lists - function frees a linked list
  * @head: first node
  * Return: nothing void function
  */

@@ -3,9 +3,9 @@
 /**
  * read_line - function reads input from stdin
  *
- * Return : pointer to read string
+ * Return: pointer to read string
  */
-char *read_line(void)
+char *read_line()
 {
 	char *buf = NULL;
 	size_t n = 0;
