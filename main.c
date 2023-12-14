@@ -11,7 +11,13 @@ int main(int argc, char **argv, char  **envp)
 	while (argc >= 1)
 	{
 		if (isatty(STDIN_FILENO) == 1)
+		{
 			interactive_shell(argv, envp);
+		}
+		else
+		{
+			non_interactive_shell(argv);
+		}
 	}
 	return (0);
 }

@@ -28,6 +28,7 @@ char *read_line(void);
 char **tok_line(char *str);
 int execut(char *cmd, char **args, char *file_name);
 void interactive_shell(char **agrs, char **envir);
+void non_interactive_shell(char ** argv);
 
 lists *path_dirs();
 void free_lists(lists *head);
