@@ -1,19 +1,6 @@
 #include "main.h"
 #include "str.h"
 #include "builtin.h"
-/**
- * struct command - structure to hold command and function for command
- * @str: string
- * @func: function for  built_in
- *
- * Description: structure will be used to call a function if cmd is valid
- */
-typedef struct command
-{
-	char *str;
-	void (*func)(char *a, char **b, char **c);
-} built_in;
-
 
 /**
  * _builtin - function chechs is command is a valid built in command

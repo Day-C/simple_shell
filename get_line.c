@@ -8,12 +8,13 @@
 char *read_line()
 {
 	char *buf = NULL;
-	size_t n = 0;
+	size_t n;
 
 	if (getline(&buf, &n, stdin) == -1)
 	{
 		free(buf);
-		exit(EXIT_SUCCESS);
+		exit(EXIT_FAILURE);
 	}
+
 	return (buf);
 }

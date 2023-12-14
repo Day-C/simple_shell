@@ -29,8 +29,14 @@ void go_to(char *ipt, char **arg, char **env_i)
 {
 	while (env_i)
 	{
-		free(ipt);
-		free(arg);
+		if (ipt != NULL  && arg != NULL)
+		{
+			if (chdir(arg[1]) == -1)
+			{
+				perror("shs: ");
+			}
+			break;
+		}
 	}
 }
 
