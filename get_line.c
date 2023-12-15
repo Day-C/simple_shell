@@ -16,22 +16,3 @@ char *read_line()
 	}
 	return (buf);
 }
-	/**
-	char *ptr;
-	int n, i = 0;
-	char buf[1024];
-
-	n = read(STDIN_FILENO, &buf, 1024);
-	if (n == -1 || buf[0] == EOF)
-		exit(EXIT_SUCCESS);
-
-	ptr = malloc(sizeof(char) * n);
-	if (!ptr)
-		exit(EXIT_SUCCESS);
-
-	while (i < n)
-	{
-		ptr[i] = buf[i];
-		i++;
-	}
-	return (ptr);v*/
