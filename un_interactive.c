@@ -1,11 +1,12 @@
 #include "main.h"
+#include "builtin.h"
 
 /**
  * non_interactive_shell - function for n non interactive shell
  * @argv: argument vec
  * Return: void
  */
-void non_interactive_shell(char **argv)
+void non_interactive_shell(char **argv, char **envir)
 {
 	char *line;
 	char **args;
@@ -14,7 +15,10 @@ void non_interactive_shell(char **argv)
 	{
 		line = read_line();
 		args = tok_line(line);
-		execut(line, args, argv[0]);
+		if (_builtin(line, args, envir) == -1)
+		{
+			run_execute(args, argv[0]);
+		}
 		free(line);
 		free(args);
 	}

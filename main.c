@@ -16,7 +16,7 @@ int main(int argc, char **argv, char  **envp)
 		}
 		else
 		{
-			non_interactive_shell(argv);
+			non_interactive_shell(argv, envp);
 		}
 	}
 	return (0);
