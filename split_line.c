@@ -14,6 +14,12 @@ char **tok_line(char *str)
 	char **ptr;
 
 	tok = strtok(dup, delim);
+	if (tok == NULL)
+	{
+		free(dup);
+		free(str);
+		exit(EXIT_SUCCESS);
+	}
 	while (tok)
 	{
 		j++;
