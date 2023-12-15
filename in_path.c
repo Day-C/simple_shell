@@ -30,12 +30,12 @@ char *in_path_check(char *cmd)
 			if (head != NULL)
 			{
 				free_lists(head);
-				break;
 			}
+			return (catted_cmd);
 
 		}
 	}
-	return (catted_cmd);
+	return (NULL);
 }
 
 

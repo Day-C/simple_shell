@@ -61,7 +61,12 @@ void run_execute(char **arguments, char *file)
 		if (cmd != NULL)
 		{
 			ret = execut(cmd, arguments, file);
-			free(cmd);
 		}
+		else
+		{
+			dprintf(STDERR_FILENO, "command: not found\n");
+			exit(127);
+		}
+		free(cmd);
 	}
 }
