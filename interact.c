@@ -13,7 +13,7 @@ void interactive_shell(char **args, char **envir)
 
 	while (1)
 	{
-		printf(":) ");
+		write(STDIN_FILENO, ":) ", 3);
 		str = read_line();
 		cmd = tok_line(str);
 		if (_builtin(str, cmd, envir) == -1)
