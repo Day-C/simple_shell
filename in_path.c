@@ -19,7 +19,7 @@ char *in_path_check(char *cmd)
 		if (stat(catted_cmd, &st) == -1)
 		{
 			free(catted_cmd);
-		temp = head->next;
+			temp = head->next;
 			free(head->dir);
 			free(head);
 			head = temp;
