@@ -3,7 +3,8 @@
 
 /**
  * non_interactive_shell - function for n non interactive shell
- * @argv: argument vec
+ * @argv: argument vector
+ * @envir: enviroment varable
  * Return: void
  */
 void non_interactive_shell(char **argv, char **envir)
