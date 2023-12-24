@@ -11,23 +11,12 @@
  */
 void exiting(char *ipt, char **arg, char **env_i)
 {
-	struct stat st;
-
 	if (env_i)
 	{
-		if (stat(arg[1], &st) == 0 || arg[1] == NULL)
-		{
-			free(ipt);
-			free(arg);
-			exit(EXIT_SUCCESS);
-		}
-
-		else
-		{
-			free(ipt);
-			free(arg);
-			exit(2);
-		}
+		free(ipt);
+		free(arg);
+		exit(0);
+		
 	}
 }
 
