@@ -1,5 +1,6 @@
 #include "main.h"
 #include "builtin.h"
+#include "str.h"
 
 /**
  * exiting - function to exit
@@ -14,12 +15,13 @@ void exiting(char *ipt, char **arg, char **env_i)
 
 	if (env_i)
 	{
-		if (stat(arg[0], &st) == 0)
+		if (stat(arg[1], &st) == 0 || arg[1] == NULL)
 		{
 			free(ipt);
 			free(arg);
 			exit(EXIT_SUCCESS);
 		}
+
 		else
 		{
 			free(ipt);

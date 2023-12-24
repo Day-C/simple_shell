@@ -6,7 +6,7 @@
  */
 char **tok_line(char *str)
 {
-	char *delim = (" \n");
+	char *delim = (" \n;");
 	char *dup = strdup(str);
 	char *tok;
 	char *token;
